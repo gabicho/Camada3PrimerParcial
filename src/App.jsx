@@ -1,16 +1,17 @@
-import './App.css'
-import Card from './Component/Card'
-import Form from './Component/Form';
+import { useState } from "react";
+import "./App.css";
 
+import Form from "./Components/Form";
 function App() {
-  const card ="tarjeta3";
+  const [isSelected, setIsSelected] = useState({
+    artista: null,
+    status: false,
+  });
   return (
     <>
-    <h1>Carga de Estudiantes</h1>
-      <Form/>
-      <Card card={card}/>
+     <Form/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
